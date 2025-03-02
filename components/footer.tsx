@@ -1,6 +1,10 @@
+"use client";
+
+import {useEffect, useState} from "react";
 import Link from "next/link";
+import {GitCommit, Github, HeartIcon} from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { buttonVariants } from "./ui/button";
-import { HeartIcon } from "lucide-react";
 
 export function Footer() {
   return (
@@ -27,8 +31,59 @@ export function Footer() {
 }
 
 export function FooterButtons() {
+	const [commitHash, setCommitHash] = useState<string | null>(null)
+
+	useEffect(() => {
+		const fetchCommitHash = async () => {
+			try {
+				const response = await fetch('/api/commit')
+				if (response.ok) {
+					const data = await response.json()
+					setCommitHash(data.commitHash)
+				} else {
+					console.error('Failed to fetch commit hash')
+				}
+			} catch (error) {
+				console.error('Error fetching commit hash:', error)
+			}
+		}
+
+		fetchCommitHash()
+	}, [])
+
   return (
     <>
+		{commitHash && (
+			<TooltipProvider>
+				<Tooltip>
+					<TooltipTrigger asChild>
+						<div>
+							<Link
+								style={{ borderRadius: "2em" }}
+								className={buttonVariants({ variant: "outline", size: "sm" })}
+								href={`https://github.com/nicholasadamou/learn-git/commit/${commitHash}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<GitCommit className="w-4 h-4" />
+								<span className="font-mono">{commitHash.slice(0, 7)}</span>
+							</Link>
+						</div>
+					</TooltipTrigger>
+					<TooltipContent>
+						<p>View latest commit</p>
+					</TooltipContent>
+				</Tooltip>
+			</TooltipProvider>
+		)}
+		<Link
+			className="text-sm hover:text-primary transition-colors duration-200 text-muted-foreground flex items-center gap-1"
+			href="https://github.com/nicholasadamou/learn-git"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<Github className="w-4 h-4" />
+		</Link>
       <Link
         href="https://github.com/sponsors/nicholasadamou"
         className={buttonVariants({ variant: "outline", size: "sm" })}
