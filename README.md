@@ -42,6 +42,8 @@ A free, open-source platform crafted specifically for beginners to master Git an
 - `web`: The main Next.js application
 - `UI`: Shared UI components
 
+## 🚀 Getting Started
+
 ### Installation
 
 1. Clone the repository:
