@@ -41,7 +41,7 @@ graph TD;
     contents --> file_management["File Management"]
 
     hooks --> useToast["use-toast.ts"]
-    hooks --> useCursor["use-canvasCursor.ts"]
+    hooks --> useCursor["useCanvasCursor.ts"]
 
     lib --> markdown["Markdown Parser"]
     lib --> routes["Routes Configuration"]
