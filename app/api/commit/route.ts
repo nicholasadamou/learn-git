@@ -12,7 +12,7 @@ export async function GET() {
 
 	try {
 		// Fetch the latest commit for the main branch
-		const response = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/commits/main`, {
+		const response = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/commits/master`, {
 			headers: {
 				Authorization: `Bearer ${GITHUB_TOKEN}`,
 				Accept: 'application/vnd.github.v3+json',
