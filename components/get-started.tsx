@@ -1,6 +1,6 @@
 "use client"
 
-import { useToast } from "@/hooks/use-toast"
+import { useToast } from "@/hooks/useToast"
 import ShinyButton from "./magicui/shiny-button"
 import { page_routes } from "@/lib/routes-config"
 import Link from "next/link"
@@ -18,8 +18,8 @@ export function GET() {
       })
     }}
   >
-     <ShinyButton>Get Started</ShinyButton> 
-    
+     <ShinyButton>Get Started</ShinyButton>
+
   </Link>
   )
 }

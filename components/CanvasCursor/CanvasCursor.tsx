@@ -1,6 +1,6 @@
 'use client';
 
-import useCanvasCursor from '@/hooks/use-canvasCursor';
+import useCanvasCursor from '@/hooks/useCanvasCursor';
 import { useEffect, useState } from 'react';
 
 const CanvasCursor = () => {

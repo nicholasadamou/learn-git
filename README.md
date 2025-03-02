@@ -42,6 +42,11 @@ Learn Git is a free and open-source platform to learn Git and GitHub. It is desi
 - `web`: The main Next.js application
 - `UI`: Shared UI components
 
+## 🏛 Architecture
+
+Learn more about the project's architecture in the [Architecture](./ARCHITECTURE.md) document.
+
+
 ## 🚀 Getting Started
 
 ### Installation

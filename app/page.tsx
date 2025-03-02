@@ -2,7 +2,7 @@ import {DownloadButton} from "@/components/animated-download-button";
 import {GET} from "@/components/get-started";
 import {MoveUpRightIcon, TerminalIcon} from "lucide-react";
 import Link from "next/link";
-import CanvasCursor from "@/components/CanvasCursor";
+import CanvasCursor from "@/components/CanvasCursor/CanvasCursor";
 import {AnimatedShinyText} from "@/components/magicui/animated-shiny-text";
 import {SparklesText} from "@/components/magicui/sparkles-text";
 
