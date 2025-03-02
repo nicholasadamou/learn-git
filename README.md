@@ -44,7 +44,7 @@ Learn Git is a free and open-source platform to learn Git and GitHub. It is desi
 
 ## 🏛 Architecture
 
-Learn more about the project's architecture in the [Architecture](./ARCHITECTURE.md) document.
+Learn more about the project's architecture in the [architecture](./ARCHITECTURE.md) document.
 
 
 ## 🚀 Getting Started
