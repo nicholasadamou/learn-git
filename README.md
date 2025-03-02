@@ -8,7 +8,7 @@
 
 ![learn git](learn-git.gif)
 
-A free, open-source platform crafted specifically for beginners to master Git and GitHub. Designed with simplicity and ease of understanding in mind, this platform provides an accessible entry point for anyone looking to enhance their version control skills.
+Learn Git is a free and open-source platform to learn Git and GitHub. It is designed to be simple and easy to understand for beginners.
 
 ## ⭐ Features
 
