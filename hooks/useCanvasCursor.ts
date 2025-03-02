@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from 'react';
 
 interface OscillatorOptions {
@@ -63,8 +65,7 @@ interface CursorPos {
 }
 
 // Global cursor position, initialized to the window center.
-const cursorPos: CursorPos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-
+const cursorPos: CursorPos = { x: 0, y: 0 };
 let lines: Line[] = [];
 let ctx: CustomCanvasContext;
 let oscillator: Oscillator;
@@ -129,6 +130,8 @@ class Line {
 }
 
 const updateCursorPosition = (e: MouseEvent | TouchEvent): void => {
+	if (typeof window === "undefined") return; // Ensure it's only running on client
+
 	if ('touches' in e && e.touches.length > 0) {
 		cursorPos.x = e.touches[0].pageX;
 		cursorPos.y = e.touches[0].pageY;
@@ -165,11 +168,15 @@ const render = (): void => {
 };
 
 const resizeCanvas = (): void => {
-	ctx.canvas.width = window.innerWidth - 20;
-	ctx.canvas.height = window.innerHeight;
+	if (typeof window !== "undefined" && ctx) {
+		ctx.canvas.width = window.innerWidth - 20;
+		ctx.canvas.height = window.innerHeight;
+	}
 };
 
 const initializeCanvas = (): void => {
+	if (typeof window === "undefined") return; // Prevent running on SSR
+
 	const canvasElement = document.getElementById('canvas') as HTMLCanvasElement | null;
 	if (!canvasElement) {
 		console.error('Canvas element with id "canvas" not found.');
@@ -184,6 +191,7 @@ const initializeCanvas = (): void => {
 	ctx.running = true;
 
 	resizeCanvas();
+
 	// Set the initial cursor position to the center of the canvas.
 	cursorPos.x = ctx.canvas.width / 2;
 	cursorPos.y = ctx.canvas.height / 2;
@@ -207,16 +215,16 @@ const initializeCanvas = (): void => {
 
 const useCanvasCursor = (): void => {
 	useEffect(() => {
-		initializeCanvas();
+		if (typeof window !== "undefined") {
+			initializeCanvas();
+		}
 
 		return () => {
-			if (ctx) {
-				ctx.running = false;
-			}
-			document.removeEventListener('mousemove', updateCursorPosition);
-			document.removeEventListener('touchstart', updateCursorPosition);
-			document.removeEventListener('touchmove', updateCursorPosition);
-			window.removeEventListener('resize', resizeCanvas);
+			if (ctx) ctx.running = false;
+			window.removeEventListener("resize", resizeCanvas);
+			document.removeEventListener("mousemove", updateCursorPosition);
+			document.removeEventListener("touchstart", updateCursorPosition);
+			document.removeEventListener("touchmove", updateCursorPosition);
 		};
 	}, []);
 };
