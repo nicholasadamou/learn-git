@@ -1,4 +1,4 @@
-import {DownloadCheatSheetButton} from "@/components/download-cheatsheet-button";
+import {ViewCheetSheetButton} from "@/components/view-cheet-sheet-button";
 import {GetStartedButton} from "@/components/get-started-button";
 import {MoveUpRightIcon, TerminalIcon} from "lucide-react";
 import Link from "next/link";
@@ -32,7 +32,7 @@ export default function Home() {
 			<div className="flex flex-row items-center gap-5">
 				<GetStartedButton/>
 				<CanvasCursor/>
-				<DownloadCheatSheetButton/>
+				<ViewCheetSheetButton/>
 			</div>
 			<span className="flex flex-row items-center gap-2 text-zinc-400 text-md mt-7 -mb-12 max-[800px]:mb-12">
         <TerminalIcon className="w-4 h-4 mr-1"/> ~ git init
