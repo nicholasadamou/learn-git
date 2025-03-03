@@ -1,4 +1,4 @@
-# [Canvas Cursor Component](CanvasCursor.tsx) and [useCanvasCursor Hook](../../hooks/useCanvasCursor.ts)
+# [Canvas Cursor Component](canvas-cursor.tsx) and [useCanvasCursor Hook](../../hooks/use-canvas-cursor.ts)
 
 ## Overview
 The **Canvas Cursor Component** is a React-based interactive effect that creates a dynamic, animated trailing effect following the user's cursor. It utilizes HTML5 Canvas and a physics-based approach to simulate fluid motion. The component consists of:

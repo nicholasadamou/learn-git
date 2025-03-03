@@ -1,29 +1,21 @@
 'use client'
 
-import {useState} from "react"
 import {Button} from "@/components/ui/button"
 import {Download} from "lucide-react"
-import {toast} from "@/hooks/useToast"
+import {toast} from "@/hooks/use-toast"
 
-export function DownloadButton() {
-	const [isHovered, setIsHovered] = useState(false)
-
+export function DownloadCheatSheetButton() {
 	return (<Button
 			variant="ghost">
 			<a
 				className="flex"
 				href="/git-cheatsheet.pdf"
 				download="git-cheatsheet.pdf"
-
-				onMouseEnter={() => setIsHovered(true)}
-				onMouseLeave={() => setIsHovered(false)}
-
-				onClick={() => {
+onClick={() => {
 					toast({
 						title: "Congratulations! 🎉", description: "You have successfully downloaded the CHEATSHEET.",
 					})
 				}}
-
 			>
 				<span className="inset-0 opacity-20 rounded-md animate-pulse"></span>
 				<Download

@@ -1,11 +1,11 @@
 "use client"
 
-import { useToast } from "@/hooks/useToast"
+import { useToast } from "@/hooks/use-toast"
 import ShinyButton from "./magicui/shiny-button"
 import { page_routes } from "@/lib/routes-config"
 import Link from "next/link"
 
-export function GET() {
+export function GetStartedButton() {
   const { toast } = useToast()
 
   return (

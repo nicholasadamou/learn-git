@@ -12,7 +12,7 @@ import Anchor from "./anchor";
 import {SheetLeftbar} from "./leftbar";
 import {page_routes} from "@/lib/routes-config";
 import {SheetClose} from "@/components/ui/sheet";
-import {LogoI} from "./Logo";
+import {LearnGitLogo} from "./learn-git-logo";
 import {Icons} from "./icons";
 
 interface NavLink {
@@ -102,7 +102,7 @@ export function Navbar() {
 
 export function Logo() {
 	return (<Link href="/" className="flex items-center gap-2.5 ml-2 sm:ml-0">
-			<LogoI/>
+			<LearnGitLogo/>
 			<h2 className="text-md font-bold">Learn Git</h2>
 		</Link>);
 }

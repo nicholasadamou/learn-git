@@ -88,7 +88,7 @@ Contains custom React hooks:
 
 - `useToast.ts` - Toast notifications.
 - `useCanvasCursor.ts` - Custom cursor effects.
-  - Read more about this hook and its companion component [here](components/CanvasCursor/README.md).
+  - Read more about this hook and its companion component [here](components/canvas-cursor/README.md).
 
 ### 6. **Library (lib) Directory**
 Holds utilities and helper functions:
