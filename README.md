@@ -76,6 +76,8 @@ Learn more about the project's architecture in the [architecture](./ARCHITECTURE
    GITHUB_TOKEN=<YOUR_GITHUB_TOKEN>
    ```
 
+	This is used to get the [latest commit](app/api/commit/route.ts) for this project from the GitHub API to be used in the [footer](components/footer.tsx).
+
 ## Development
 
 ### Running the Development Server
