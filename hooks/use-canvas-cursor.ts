@@ -169,7 +169,7 @@ const render = (): void => {
 
 const resizeCanvas = (): void => {
 	if (typeof window !== "undefined" && ctx) {
-		ctx.canvas.width = window.innerWidth - 20;
+		ctx.canvas.width = window.innerWidth;
 		ctx.canvas.height = window.innerHeight;
 	}
 };
