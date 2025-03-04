@@ -182,11 +182,13 @@ const initializeCanvas = (): void => {
 		console.error('Canvas element with id "canvas" not found.');
 		return;
 	}
+	
 	const context = canvasElement.getContext('2d');
 	if (!context) {
 		console.error('Failed to get 2D context.');
 		return;
 	}
+	
 	ctx = context as CustomCanvasContext;
 	ctx.running = true;
 
