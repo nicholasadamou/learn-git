@@ -2,7 +2,8 @@ import {ViewCheetSheetButton} from "@/components/view-cheet-sheet-button";
 import {GetStartedButton} from "@/components/get-started-button";
 import {MoveUpRightIcon, TerminalIcon} from "lucide-react";
 import Link from "next/link";
-import CanvasCursor from "@/components/canvas-cursor/canvas-cursor";
+// import CanvasCursor from "@/components/canvas-cursor/canvas-cursor";
+// import FluidCursor from "@/components/fluid-cursor";
 import {AnimatedShinyText} from "@/components/magicui/animated-shiny-text";
 import {SparklesText} from "@/components/magicui/sparkles-text";
 
@@ -31,7 +32,8 @@ export default function Home() {
 			</p>
 			<div className="flex flex-row items-center gap-5">
 				<GetStartedButton/>
-				<CanvasCursor/>
+				{/*<CanvasCursor/>*/}
+				{/*<FluidCursor/>*/}
 				<ViewCheetSheetButton/>
 			</div>
 			<span className="flex flex-row items-center gap-2 text-zinc-400 text-md mt-7 -mb-12 max-[800px]:mb-12">
