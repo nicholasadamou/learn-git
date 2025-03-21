@@ -46,7 +46,6 @@ Learn Git is a free and open-source platform to learn Git. It is designed to be 
 
 Learn more about the project's architecture in the [architecture](./ARCHITECTURE.md) document.
 
-
 ## 🚀 Getting Started
 
 ### Installation

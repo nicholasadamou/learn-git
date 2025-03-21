@@ -87,8 +87,6 @@ Stores Git documentation in **MDX** format, organized into topics:
 Contains custom React hooks:
 
 - `use-toast.ts` - Toast notifications.
-- `use-canvas-cursor.ts` - Custom cursor effects.
-  - Read more about this hook and its companion component [here](components/canvas-cursor/README.md).
 
 ### 6. **Library (lib) Directory**
 Holds utilities and helper functions:
