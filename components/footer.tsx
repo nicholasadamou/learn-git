@@ -3,7 +3,7 @@
 import {useEffect, useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {GitCommit, HeartIcon} from "lucide-react";
+import {GitCommit} from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Icons } from "./icons";
 import { buttonVariants } from "./ui/button";
@@ -82,13 +82,6 @@ export function FooterButtons() {
 		>
 			<Icons.gitHub className="w-4 h-4" />
 		</Link>
-      <Link
-        href="https://github.com/sponsors/smeltery"
-        className={buttonVariants({ variant: "outline", size: "sm" })}
-      >
-        <HeartIcon className="h-4 w-4 mr-2 text-red-600 fill-current" />
-        Sponsor
-      </Link>
     </>
   );
 }
