@@ -1,3 +1,4 @@
+import { page_routes } from "../lib/routes-config";
 import { createServer } from "node:net";
 const listener = createServer();
 await new Promise<void>((resolve, reject) => listener.once("error", reject).listen(0, "127.0.0.1", resolve));
@@ -24,8 +25,7 @@ try {
   if (!ready) throw new Error("Production server did not become ready");
   for (const [path, status, text] of [
     ["/", 200, "Learn Git"],
-    ["/docs/getting-started/introduction", 200, "Git"],
-    ["/docs/essential-commands/git-status", 200, "git status"],
+    ...page_routes.map(({ href }) => [`/docs${href}`, 200, "Learn Git"] as const),
     ["/git-cheatsheet.pdf", 200, "%PDF"],
     ["/does-not-exist", 404, "404"],
   ] as const) {

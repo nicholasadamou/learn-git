@@ -32,7 +32,8 @@ flowchart LR
 Use descriptive second-level headings for the table of contents and language
 labels on fenced code blocks. Supported components are registered in
 `lib/markdown.ts`, including `Note`, `Tabs`, `Files`, and `Stepper`. Follow a
-nearby lesson's component usage.
+nearby lesson's component usage. JavaScript expressions in MDX are disabled by
+the compiler; use string attributes and registered components instead.
 
 Preview your lesson with `bun run dev`, check the exact URL, and run `bun run ci`.
 Confirm that the title appears in search and navigation and that commands copy
