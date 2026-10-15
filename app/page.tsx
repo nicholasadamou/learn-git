@@ -2,7 +2,6 @@ import {ViewCheetSheetButton} from "@/components/view-cheet-sheet-button";
 import {GetStartedButton} from "@/components/get-started-button";
 import {MoveUpRightIcon, TerminalIcon} from "lucide-react";
 import Link from "next/link";
-import CanvasCursor from "@/components/canvas-cursor/canvas-cursor";
 import {AnimatedShinyText} from "@/components/magicui/animated-shiny-text";
 import {SparklesText} from "@/components/magicui/sparkles-text";
 
@@ -25,13 +24,12 @@ export default function Home() {
 				<SparklesText text="Learn Git" />
 			</h1>
 			<p className="mb-8 sm:text-xl max-w-[800px] text-muted-foreground">
-				Learn Git is a free and open-source platform to learn Git and
+				Learn Git is a free platform to learn Git and
 				GitHub. It is designed to be simple and easy to understand for
 				beginners.
 			</p>
 			<div className="flex flex-row items-center gap-5">
 				<GetStartedButton/>
-				<CanvasCursor/>
 				<ViewCheetSheetButton/>
 			</div>
 			<span className="flex flex-row items-center gap-2 text-zinc-400 text-md mt-7 -mb-12 max-[800px]:mb-12">
