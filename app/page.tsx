@@ -24,7 +24,7 @@ export default function Home() {
 				<SparklesText text="Learn Git" />
 			</h1>
 			<p className="mb-8 sm:text-xl max-w-[800px] text-muted-foreground">
-				Learn Git is a free and open-source platform to learn Git and
+				Learn Git is a free platform to learn Git and
 				GitHub. It is designed to be simple and easy to understand for
 				beginners.
 			</p>
