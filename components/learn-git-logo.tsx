@@ -8,7 +8,7 @@ export function LearnGitLogo() {
 
   return (
     <div
-      className="inline-flex items-center space-x-3 bg-gradient-to-br"
+      className="inline-flex items-center space-x-3 bg-linear-to-br"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

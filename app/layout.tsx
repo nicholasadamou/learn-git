@@ -80,7 +80,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="flex-grow sm:container mx-auto w-[90vw] h-auto">
+          <main className="grow sm:container mx-auto w-[90vw] h-auto">
             {children}
           </main>
           <Footer />

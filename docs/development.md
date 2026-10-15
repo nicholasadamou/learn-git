@@ -58,3 +58,7 @@ Run `bun run ci` after either change. CI installs with the frozen Bun lockfile.
 
 If activation fails, check network access to Flox and package registries. If the
 Bun lockfile is out of sync, run `bun install` intentionally and review its diff.
+
+Tailwind 4 uses CSS configuration in `styles/globals.css` and its dedicated
+PostCSS plugin. Use Safari 16.4+, Chrome 111+, or Firefox 128+ for the styling
+features required by Tailwind 4.
