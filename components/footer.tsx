@@ -14,9 +14,10 @@ export function Footer() {
       <div className="container flex items-center sm:justify-between justify-center sm:gap-0 gap-4 h-full text-muted-foreground text-sm flex-wrap sm:py-0 py-3 max-sm:px-4">
         <Link
           href="https://github.com/smeltery"
-          className="inline-flex items-center"
+          className="inline-flex items-center gap-2 hover:text-foreground"
         >
-          <Image src="/smeltery.svg" alt="Smeltery Labs" width={24} height={24} />
+          <Image src="/smeltery.svg" alt="" width={24} height={24} />
+          <span>Smeltery Labs</span>
         </Link>
 
         <div className="gap-4 items-center hidden md:flex">
