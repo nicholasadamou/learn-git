@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-	const GITHUB_USERNAME = 'nicholasadamou';
+	const GITHUB_USERNAME = 'smeltery';
 	const REPO_NAME = 'learn-git';
 	const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 

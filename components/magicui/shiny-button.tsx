@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, type AnimationProps } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
@@ -24,7 +24,7 @@ const animationProps = {
       mass: 0.5,
     },
   },
-} as AnimationProps;
+} as React.ComponentProps<typeof motion.button>;
 interface ShinyButtonProps {
   children: React.ReactNode;
   className?: string;
@@ -35,7 +35,7 @@ const ShinyButton = ({ children, className, ...props }: ShinyButtonProps) => {
       {...animationProps}
       {...props}
       className={cn(
-        "relative rounded-lg px-6 py-2 font-medium backdrop-blur-xl transition-shadow duration-300 ease-in-out hover:shadow dark:bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/10%)_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_hsl(var(--primary)/10%)]",
+        "relative rounded-lg px-6 py-2 font-medium backdrop-blur-xl transition-shadow duration-300 ease-in-out hover:shadow-sm dark:bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/10%)_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_hsl(var(--primary)/10%)]",
         className,
       )}
     >

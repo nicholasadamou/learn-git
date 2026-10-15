@@ -31,7 +31,7 @@ export function Navbar() {
 	useEffect(() => {
 		const fetchStars = async () => {
 			try {
-				const response = await fetch('https://api.github.com/repos/nicholasadamou/learn-git');
+				const response = await fetch('https://api.github.com/repos/smeltery/learn-git');
 				const data = await response.json();
 
 				const starCount = data.stargazers_count;
@@ -65,7 +65,7 @@ export function Navbar() {
 							variant: "rainbow",
 						}), "hidden md:inline-flex",)}
 						target="_blank"
-						href="https://github.com/nicholasadamou/learn-git"
+						href="https://github.com/smeltery/learn-git"
 					>
 						<div className="flex items-center gap-1">
 							<Icons.gitHub className="size-4"/>
@@ -85,7 +85,7 @@ export function Navbar() {
 						<Search/>
 						<div className="flex ml-2.5 sm:ml-0">
 							<Link
-								href="https://github.com/nicholasadamou/learn-git.git"
+								href="https://github.com/smeltery/learn-git.git"
 								target="_blank"
 								rel="noopener noreferrer"
 								className={buttonVariants({variant: "ghost", size: "icon"})}
@@ -112,7 +112,7 @@ export function NavMenu({isSheet = false}) {
 			{NAVLINKS.map((item) => {
 				const Comp = (<Anchor
 						key={item.title + item.href}
-						activeClassName="!text-primary md:font-semibold font-medium"
+						activeClassName="text-primary! md:font-semibold font-medium"
 						absolute
 						className="flex items-center gap-1 dark:text-stone-300/85 text-stone-800"
 						href={item.href}

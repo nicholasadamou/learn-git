@@ -58,3 +58,12 @@ Run `bun run ci` after either change. CI installs with the frozen Bun lockfile.
 
 If activation fails, check network access to Flox and package registries. If the
 Bun lockfile is out of sync, run `bun install` intentionally and review its diff.
+
+Tailwind 4 uses CSS configuration in `styles/globals.css` and its dedicated
+PostCSS plugin. Use Safari 16.4+, Chrome 111+, or Firefox 128+ for the styling
+features required by Tailwind 4.
+
+Next.js uses Webpack explicitly because the service-worker plugin relies on it.
+ESLint uses `eslint.config.mjs`. Type checks run TypeScript 7's native compiler;
+TypeScript 6 remains installed for ESLint and Next.js compiler API compatibility.
+Node type definitions stay aligned with the Flox Node 22 runtime.
