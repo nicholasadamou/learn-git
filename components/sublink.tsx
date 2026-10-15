@@ -8,7 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 import { SheetClose } from "@/components/ui/sheet";
 import { ChevronDown, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function SubLink({
@@ -20,11 +20,13 @@ export default function SubLink({
   isSheet,
 }: EachRoute & { level: number; isSheet: boolean }) {
   const path = usePathname();
-  const [isOpen, setIsOpen] = useState(level == 0);
+  const [previousPath, setPreviousPath] = useState(path);
+  const [isOpen, setIsOpen] = useState(level === 0 || path.includes(href));
 
-  useEffect(() => {
-    if (path == href || path.includes(href)) setIsOpen(true);
-  }, [href, path]);
+  if (previousPath !== path) {
+    setPreviousPath(path);
+    if (path.includes(href)) setIsOpen(true);
+  }
 
   const Comp = (
     <Anchor

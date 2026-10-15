@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/smeltery/learn-git/actions/workflows/ci.yml/badge.svg)](https://github.com/smeltery/learn-git/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/smeltery/learn-git)](https://github.com/smeltery/learn-git/releases)
-![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs)
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs)
 ![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38bdf8?logo=tailwindcss&logoColor=white)
 ![Bun](https://img.shields.io/badge/Bun-000?logo=bun&logoColor=white)

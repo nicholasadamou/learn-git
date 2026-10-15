@@ -17,7 +17,7 @@ const APP_DESCRIPTION = "Learn Git is a free learning platform crafted specifica
 
 export const metadata: Metadata = {
   applicationName: APP_NAME,
-  metadataBase: new URL("https://learn-git.vercel.app"),
+  metadataBase: new URL("https://learn-git-five.vercel.app"),
   title: {
     default: APP_DEFAULT_TITLE,
     template: APP_TITLE_TEMPLATE,
