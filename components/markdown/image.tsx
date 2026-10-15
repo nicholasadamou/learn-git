@@ -12,6 +12,7 @@ export default function Image({
   ...props
 }: ComponentProps<"img">) {
   if (!src) return null;
+  if (typeof src !== "string") throw new Error("MDX images require a URL string");
   return (
     <NextImage
       src={src}

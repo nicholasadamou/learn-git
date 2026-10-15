@@ -112,7 +112,7 @@ export function NavMenu({isSheet = false}) {
 			{NAVLINKS.map((item) => {
 				const Comp = (<Anchor
 						key={item.title + item.href}
-						activeClassName="!text-primary md:font-semibold font-medium"
+						activeClassName="text-primary! md:font-semibold font-medium"
 						absolute
 						className="flex items-center gap-1 dark:text-stone-300/85 text-stone-800"
 						href={item.href}

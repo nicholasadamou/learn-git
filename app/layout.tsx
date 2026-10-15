@@ -13,7 +13,7 @@ import type { Metadata, Viewport } from "next"
 const APP_NAME = "Learn Git";
 const APP_DEFAULT_TITLE = "Learn Git";
 const APP_TITLE_TEMPLATE = "%s - Learn Git";
-const APP_DESCRIPTION = "Learn Git is a free, open-source platform crafted specifically for beginners to master Git and GitHub. Designed with simplicity and ease of understanding in mind, this platform provides an accessible entry point for anyone looking to enhance their version control skills.";
+const APP_DESCRIPTION = "Learn Git is a free learning platform crafted specifically for beginners to master Git and GitHub. Designed with simplicity and ease of understanding in mind, this platform provides an accessible entry point for anyone looking to enhance their version control skills.";
 
 export const metadata: Metadata = {
   applicationName: APP_NAME,
@@ -80,7 +80,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="flex-grow sm:container mx-auto w-[90vw] h-auto">
+          <main className="grow sm:container mx-auto w-[90vw] h-auto">
             {children}
           </main>
           <Footer />
